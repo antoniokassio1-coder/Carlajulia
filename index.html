@@ -208,13 +208,13 @@ Com todo meu amor,<br>
 <strong>Kássio</strong>
 </footer>
 
-<div id="surpresa">
-<h1>Eu te amo, Carla Julia ❤️</h1>
-<p>
-Não só hoje.<br>
-Não só agora.<br><br>
-Mas em todos os dias que ainda vamos viver.
-</p>
+<div id="surpresa" style="display:none;">
+    <h1>Eu te amo, Carla Julia ❤️</h1>
+    <p style="font-size:1.4em;">
+        Não só hoje.<br>
+        Não só agora.<br><br>
+        Mas em todos os dias que ainda vamos viver.
+    </p>
 </div>
 
 <audio id="music">
@@ -223,4 +223,14 @@ Mas em todos os dias que ainda vamos viver.
 
 <script>
 function playMusic() {
-    document.getElement
+    document.getElementById("music").play();
+}
+
+function mostrarSurpresa() {
+    document.getElementById("surpresa").style.display = "block";
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+    });
+}
+</script>
